@@ -123,7 +123,7 @@ if __name__ == "__main__":
     # Text parameters.
     FONT_FACE = cv2.FONT_HERSHEY_SIMPLEX
     FONT_SCALE = 0.7
-    THICKNESS = 3
+    THICKNESS = 1
     
     # Colors
     BLACK  = (0,0,0)
@@ -131,11 +131,10 @@ if __name__ == "__main__":
     YELLOW = (0,255,255)
     RED    = (0,0,255)
     
-    # Connect to AI inference engine
-    hw_location = '172.17.0.1' 
-    model_name = 'HumanVehicleV8n--512x512_quant_n2x_orca1_1'
-    # model_name = 'NVRVehicleV8n--512x512_quant_n2x_orca1_1'
-    
+    # Connect to AI inference engine, docker ip: '172.17.0.1'
+    hw_location = '192.168.20.13' 
+    model_name = 'NVRVehicleV8n--512x512_quant_n2x_orca1_1'
+
     # Connect to degirum server ###
     zoo = dg.connect(hw_location)
     # print(zoo.list_models())
@@ -144,8 +143,8 @@ if __name__ == "__main__":
     model = zoo.load_model(model_name)
 
     # file source
-    video_path = '/Users/sam.latticework/lw2024/2_testData/Cam06_2024042.mp4'
-    
+    video_path = "https://raw.githubusercontent.com/DeGirum/PySDKExamples/main/images/Traffic.mp4"
+
     # inference
     main()
 
