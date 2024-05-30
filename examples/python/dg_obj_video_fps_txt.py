@@ -20,6 +20,7 @@ def main():
     cap = cv2.VideoCapture(video_source)
     
     # 初始化計數器
+    # fps_filtered = 30
     frame_count = 0
     start_time = time.time()
 
@@ -57,8 +58,7 @@ def main():
 
 if __name__ == "__main__":
     # Connect to AI inference engine
-    # hw_location = '172.17.0.1' # docker
-    hw_location = '192.168.20.13'
+    hw_location = '172.17.0.1'
 
     # Connect to degirum server
     zoo = dg.connect(hw_location)

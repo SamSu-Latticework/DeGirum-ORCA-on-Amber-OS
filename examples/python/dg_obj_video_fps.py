@@ -132,7 +132,7 @@ if __name__ == "__main__":
     RED    = (0,0,255)
     
     # Connect to AI inference engine, docker ip: '172.17.0.1'
-    hw_location = '192.168.20.13' 
+    hw_location = '172.17.0.1' 
     model_name = 'NVRVehicleV8n--512x512_quant_n2x_orca1_1'
 
     # Connect to degirum server ###
